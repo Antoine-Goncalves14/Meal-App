@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, LogBox } from 'react-native';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
 import MealsNavigator from './navigation/MealsNavigator';
+
+LogBox.ignoreAllLogs(); // Ignore interpolate() logs warning
 
 const fetchFonts = async () => {
   await Font.loadAsync({
